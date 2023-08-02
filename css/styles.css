@@ -1500,7 +1500,7 @@
 
 
     .mainHome {
-        margin: 40px 40px;
+        margin: 40px 30px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 60px 200px 500px 450px 500px;
