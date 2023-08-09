@@ -59,7 +59,7 @@
     margin: 40px 80px;
     display: grid;
     grid-template-columns: 50% 50% ;
-    grid-template-rows: 70px 500px 400px 350px 500px;
+    grid-template-rows: 70px auto 400px 350px 500px;
     row-gap: 45px;
     grid-template-areas:
     "titulo titulo"
@@ -127,6 +127,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     border: solid rgb(105, 105, 105) 2px;
     border-radius: 8px;
     background-color: white;
@@ -224,15 +225,42 @@
 
 .mainServ {
     font-family: Montserrat; 
+    margin: 40px 80px;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: auto auto;
+    row-gap: 45px;
+    grid-template-areas: 
+    "seccionA seccionB"
+    "formulario formulario";
+
 }
 .serv {
-    width: 60%;
-    margin: 10px 40px 40px 40px;
-    padding: 30px;
+    grid-area: seccionA;
+    display: flex;
+    flex-direction: column;
+
 }
+
+.serv2 {
+    grid-area: seccionB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formularioServicios {
+    grid-area: formulario;
+    background-color:rgb(143, 12, 23);
+    padding: 30px 30px;
+    border-radius: 8px;
+}
+    
 .tituloserv{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .verplanes {
@@ -243,6 +271,8 @@
     border: none;
     padding: 12px;
     font-weight: bold;
+    margin: auto;
+ 
 }
 
 .textoformserv{
@@ -265,13 +295,12 @@
 
 .camposServ {
     display: block;
-    width: 30%;
     padding: 10px;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid white;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
     background-color:rgb(143, 12, 23) ;
 }
@@ -287,7 +316,7 @@
     cursor: pointer;
 }
  
-.serv1 p {
+.serv p {
     padding-top: 10px;
     padding-bottom: 20px;
 }
@@ -314,7 +343,8 @@
 .contenedorFotos {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: 50px;
+    margin: 3rem;
 }
 .fotos {
     display: flex;
@@ -323,16 +353,14 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
-    height: 90%;
-    margin: 25px 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     
 }
 
     
 .d {
+    max-width: 350px;
     width: 100%;
-    height: 200px;
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 15px;
@@ -475,16 +503,16 @@
 
 /* MEDIA QUERIES */
 
-@media (min-width: 600px) and (max-width: 991px) {
+
+
+
+@media (max-width: 991px) {
 
     /* HOME */
 
     .mainHome {
-        margin: 40px 80px;
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 300px 360px 360px 500px;
-        row-gap: 45px;
+        grid-template-rows: 60px auto 360px 360px 500px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -494,43 +522,6 @@
         "formulario";
     }
     
-    .forth-row {
-        background-color: rgba(184, 184, 184, 0.2);
-    }
-    .divido {
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nuestrosDisenos{
-        color:rgb(218, 13, 30);
-        font-size: 40px;
-        text-transform: uppercase; 
-        text-align: center;
-        font-family: Cocogoose;
-        margin: 0;
-    }
-    
-    
-    .carrusel {
-        grid-area: carrusel;
-    }
-    
-    .quien {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: quien;
-        justify-self: center;
-        background-color: rgb(179, 53, 53);
-        border-radius: 8px;
-
-    }
     .quienesSomos{
         color:rgb(0, 0, 0);
         font-size: 40px;
@@ -540,52 +531,18 @@
     }
     
     .pquienesSomos {
-        color: black;
-        font-size: 15px;
-        line-height: 15px;
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome {
-        grid-area: muneco;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid rgb(105, 105, 105) 2px;
-        border-radius: 8px;
-        background-color: white;
-    }
     .munecoHome img {
         display: none;
     }
     
     .homeContact {
-        grid-area: contacto;
-        text-align: center;
         margin-top: 10px;
     }
     
-    .botonContacto {
-        font-size: 15px;
-        color: white;
-        background-color: #333;
-        border-radius: 20px;
-        border: none;
-        padding: 12px;
-        font-weight: bold;   
-    }
-    
-    .siAbajo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        grid-area: siabajo;
-        border-radius: 8px;
-        background-color: rgb(179, 53, 53);
-
-    }
     .muneco3 {
         width: 350px;
     }
@@ -595,151 +552,45 @@
     .muneco1 {
         display: none;
     }
-    .siAbajo h2 {
-        text-align: center;
-        margin-top: 15px;
-    }
     
     .seccionFormulario {
-        display: flex;
-        flex-direction: column;
         align-content: center;
-        justify-content: center;
-        grid-area: formulario;
-        background-color: rgb(179, 53, 53);
         border-radius: 8px;
     }
     
     .formHome {
-        display: block;
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
-        font-size: 25px;
-    }
-    .labelHome {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    
-    .camposHome {
-        display: block;
-        width: 75%;
-        padding: 12px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-radius: 5px;
-        border-bottom: 1px solid white;
-        font-size: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(247, 141, 141) ;
-       
-    }
-    
-    .btnFormularioHome {
-        background-color: crimson;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-top: 10px;
-        cursor: pointer;
-
-    
-    }
 
     /* DISEÑOS */
 
-    .mainDisenos {
-        background-image:url(../img/white-spiral.jpg) ;
-    }
-    
-    .tituloDisenos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    .tituloDisenos img {
-       height: 100px;
-       width: 300px;
-       margin-right: 35px;
-       margin-top: 20px;
-    }
     .contenedorFotos {
-        display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 10px;
-    }
-    .fotos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        height: 90%;
-        margin: 25px 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        
-    }
-    
-        
-    .d {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        cursor: pointer;
-    }
-      
-    .disenoDesc {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .masInfo {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        transition: transform 0.5s;
-    }
-    
-    .masInfo:hover  {
-        transform: translateY(-5px);
-    
     }
 
+    /* SERVICIOS */
+
+    .serv p {
+        font-size: 15px;
+    }
+
+
+
+
 } 
+
+
 
 @media (min-width: 800px) and (max-width: 900px) {
 
     /* HOME */
 
     .mainHome {
-        margin: 40px 80px;
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 60px 280px 360px 360px 500px;
-        row-gap: 45px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -749,45 +600,7 @@
         "formulario";
     }
     
-    .forth-row {
-        background-color: rgba(184, 184, 184, 0.2);
-    }
-    .divido {
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nuestrosDisenos{
-        color:rgb(218, 13, 30);
-        font-size: 40px;
-        text-transform: uppercase; 
-        text-align: center;
-        font-family: Cocogoose;
-        margin: 0;
-    }
-    
-    
-    .carrusel {
-        grid-area: carrusel;
-    }
-    
-    .quien {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: quien;
-        justify-self: center;
-        background-color: rgb(179, 53, 53);
-        border-radius: 8px;
-
-    }
     .quienesSomos{
-        color:rgb(0, 0, 0);
         font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
@@ -795,51 +608,20 @@
     }
     
     .pquienesSomos {
-        color: black;
-        font-size: 15px;
-        line-height: 15px;
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome {
-        grid-area: muneco;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid rgb(105, 105, 105) 2px;
-        border-radius: 8px;
-        background-color: white;
-    }
     .munecoHome img {
         display: none;
     }
     
     .homeContact {
-        grid-area: contacto;
-        text-align: center;
         margin-top: 10px;
     }
     
-    .botonContacto {
-        font-size: 15px;
-        color: white;
-        background-color: #333;
-        border-radius: 20px;
-        border: none;
-        padding: 12px;
-        font-weight: bold;   
-    }
-    
     .siAbajo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        grid-area: siabajo;
         border-radius: 8px;
-        background-color: rgb(179, 53, 53);
-
     }
     .muneco3 {
         width: 350px;
@@ -850,137 +632,31 @@
     .muneco1 {
         display: none;
     }
-    .siAbajo h2 {
-        text-align: center;
-        margin-top: 15px;
-    }
     
     .seccionFormulario {
-        display: flex;
-        flex-direction: column;
         align-content: center;
         justify-content: center;
-        grid-area: formulario;
-        background-color: rgb(179, 53, 53);
         border-radius: 8px;
     }
     
     .formHome {
-        display: block;
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
-        font-size: 25px;
-    }
-    .labelHome {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    
-    .camposHome {
-        display: block;
-        width: 75%;
-        padding: 12px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-radius: 5px;
-        border-bottom: 1px solid white;
-        font-size: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(247, 141, 141) ;
-       
-    }
-    
-    .btnFormularioHome {
-        background-color: crimson;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-top: 10px;
-        cursor: pointer;
-
-    
-    }
 
     /* DISEÑOS */
 
-    .mainDisenos {
-        background-image:url(../img/white-spiral.jpg) ;
-    }
-    
-    .tituloDisenos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    .tituloDisenos img {
-       height: 100px;
-       width: 300px;
-       margin-right: 35px;
-       margin-top: 20px;
-    }
     .contenedorFotos {
-        display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 10px;
     }
-    .fotos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        height: 90%;
-        margin: 25px 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        
-    }
-    
-        
-    .d {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        cursor: pointer;
-    }
-      
-    .disenoDesc {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .masInfo {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        transition: transform 0.5s;
-    }
-    
-    .masInfo:hover  {
-        transform: translateY(-5px);
-    
+
+
+    /* SERVICIOS */
+
+    .tituloserv {
+        font-size: 22px;
     }
 
 }
@@ -991,11 +667,8 @@
 
 
     .mainHome {
-        margin: 40px 80px;
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 60px 250px 360px 360px 500px;
-        row-gap: 45px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -1004,97 +677,29 @@
         "siabajo"
         "formulario";
     }
-    
-    .forth-row {
-        background-color: rgba(184, 184, 184, 0.2);
-    }
-    .divido {
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nuestrosDisenos{
-        color:rgb(218, 13, 30);
-        font-size: 40px;
-        text-transform: uppercase; 
-        text-align: center;
-        font-family: Cocogoose;
-        margin: 0;
-    }
-    
-    
-    .carrusel {
-        grid-area: carrusel;
-    }
-    
-    .quien {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: quien;
-        justify-self: center;
-        background-color: rgb(179, 53, 53);
-        border-radius: 8px;
-
-    }
+ 
     .quienesSomos{
-        color:rgb(0, 0, 0);
-        font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
     .pquienesSomos {
-        color: black;
-        font-size: 15px;
-        line-height: 15px;
         margin-left: 45px;
         margin-right: 45px;
     }
-    
-    .munecoHome {
-        grid-area: muneco;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid rgb(105, 105, 105) 2px;
-        border-radius: 8px;
-        background-color: white;
-    }
+
     .munecoHome img {
         display: none;
     }
     
     .homeContact {
-        grid-area: contacto;
-        text-align: center;
         margin-top: 10px;
     }
     
-    .botonContacto {
-        font-size: 15px;
-        color: white;
-        background-color: #333;
-        border-radius: 20px;
-        border: none;
-        padding: 12px;
-        font-weight: bold;   
-    }
     
     .siAbajo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        grid-area: siabajo;
         border-radius: 8px;
-        background-color: rgb(179, 53, 53);
 
     }
     .muneco3 {
@@ -1106,137 +711,37 @@
     .muneco1 {
         display: none;
     }
-    .siAbajo h2 {
-        text-align: center;
-        margin-top: 15px;
-    }
     
     .seccionFormulario {
-        display: flex;
-        flex-direction: column;
         align-content: center;
-        justify-content: center;
-        grid-area: formulario;
-        background-color: rgb(179, 53, 53);
         border-radius: 8px;
     }
     
     .formHome {
-        display: block;
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
-        font-size: 25px;
-    }
-    .labelHome {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    
-    .camposHome {
-        display: block;
-        width: 75%;
-        padding: 12px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-radius: 5px;
-        border-bottom: 1px solid white;
-        font-size: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(247, 141, 141) ;
-       
-    }
-    
-    .btnFormularioHome {
-        background-color: crimson;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-top: 10px;
-        cursor: pointer;
-
-    
-    }
-
     /* DISEÑOS */
 
-    .mainDisenos {
-        background-image:url(../img/white-spiral.jpg) ;
-    }
-    
-    .tituloDisenos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    .tituloDisenos img {
-       height: 100px;
-       width: 300px;
-       margin-right: 35px;
-       margin-top: 20px;
-    }
     .contenedorFotos {
-        display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap: 10px;
-    }
-    .fotos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        height: 90%;
-        margin: 25px 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        
     }
     
-        
-    .d {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        cursor: pointer;
+    /* SERVICIOS */
+
+    .mainServ {
+        grid-template-columns: 50% 50% ;
     }
-      
-    .disenoDesc {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 20px;
+
+    .serv2 img {
+        width: 280px;
     }
-    
-    .masInfo {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        transition: transform 0.5s;
-    }
-    
-    .masInfo:hover  {
-        transform: translateY(-5px);
-    
+
+
+    .tituloserv {
+        font-size: 22px;
     }
 
 }
@@ -1245,11 +750,9 @@
 
     /* HOME */
     .mainHome {
-        margin: 40px 80px;
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 210px 360px 360px 500px;
-        row-gap: 45px;
+        grid-template-rows: 60px auto 360px 360px 500px;
+        margin: 20px 30px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -1259,96 +762,27 @@
         "formulario";
     }
     
-    .forth-row {
-        background-color: rgba(184, 184, 184, 0.2);
-    }
-    .divido {
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nuestrosDisenos{
-        color:rgb(218, 13, 30);
-        font-size: 40px;
-        text-transform: uppercase; 
-        text-align: center;
-        font-family: Cocogoose;
-        margin: 0;
-    }
-    
-    
-    .carrusel {
-        grid-area: carrusel;
-    }
-    
-    .quien {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: quien;
-        justify-self: center;
-        background-color: rgb(179, 53, 53);
-        border-radius: 8px;
-
-    }
     .quienesSomos{
-        color:rgb(0, 0, 0);
-        font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
     .pquienesSomos {
-        color: black;
-        font-size: 15px;
-        line-height: 15px;
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome {
-        grid-area: muneco;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid rgb(105, 105, 105) 2px;
-        border-radius: 8px;
-        background-color: white;
-    }
     .munecoHome img {
         display: none;
     }
     
     .homeContact {
-        grid-area: contacto;
-        text-align: center;
         margin-top: 10px;
     }
     
-    .botonContacto {
-        font-size: 15px;
-        color: white;
-        background-color: #333;
-        border-radius: 20px;
-        border: none;
-        padding: 12px;
-        font-weight: bold;   
-    }
-    
     .siAbajo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        grid-area: siabajo;
         border-radius: 8px;
-        background-color: rgb(179, 53, 53);
 
     }
     .muneco3 {
@@ -1360,137 +794,39 @@
     .muneco1 {
         display: none;
     }
-    .siAbajo h2 {
-        text-align: center;
-        margin-top: 15px;
-    }
     
     .seccionFormulario {
-        display: flex;
-        flex-direction: column;
         align-content: center;
-        justify-content: center;
-        grid-area: formulario;
-        background-color: rgb(179, 53, 53);
         border-radius: 8px;
     }
     
     .formHome {
-        display: block;
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
-        font-size: 25px;
-    }
-    .labelHome {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    
-    .camposHome {
-        display: block;
-        width: 75%;
-        padding: 12px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-radius: 5px;
-        border-bottom: 1px solid white;
-        font-size: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(247, 141, 141) ;
-       
-    }
-    
-    .btnFormularioHome {
-        background-color: crimson;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-top: 10px;
-        cursor: pointer;
-
-    
-    }
-
 
     /* DISEÑOS */
-
-    .mainDisenos {
-        background-image:url(../img/white-spiral.jpg) ;
-    }
     
-    .tituloDisenos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     
-    }
-    
-    .tituloDisenos img {
-       height: 100px;
-       width: 300px;
-       margin-right: 35px;
-       margin-top: 20px;
-    }
     .contenedorFotos {
-        display: grid;
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(7, 500px);
-        gap: 40px;
+        grid-template-rows: repeat(7, auto);
     }
-    .fotos {
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        height: 100%;
-        margin: 25px 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        
-    }
+
+    /* SERVICIOS */
+
+    .mainServ {
+        margin: 40px 50px;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "seccionA" 
+        "seccionB"
+        "formulario";
     
-        
-    .d {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border-radius: 15px;
-        cursor: pointer;
     }
       
-    .disenoDesc {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .masInfo {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        transition: transform 0.5s;
-    }
-    
-    .masInfo:hover  {
-        transform: translateY(-5px);
-    
-    }
 
 }
 
@@ -1500,11 +836,122 @@
 
 
     .mainHome {
-        margin: 40px 30px;
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 200px 500px 450px 500px;
-        row-gap: 45px;
+        grid-template-rows: 60px auto 500px 450px 500px;
+        margin: 20px 10px;
+        grid-template-areas:
+        "titulo"
+        "carrusel"
+        "quien"
+        "contacto"
+        "siabajo"
+        "formulario";
+    }
+
+    .quienesSomos{
+        margin-top: 20px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .pquienesSomos {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    .munecoHome img {
+        display: none;
+    }
+    
+    .homeContact {
+        margin-top: 10px;
+    }
+
+    
+    .siAbajo {
+        border-radius: 8px;
+
+    }
+    .muneco3 {
+        max-width: 300px;
+        width: 100%;
+    }
+    .muneco2 {
+        display: none;
+    }
+    .muneco1 {
+        display: none;
+    }
+    
+    .seccionFormulario {
+        align-content: center;
+        border-radius: 8px;
+    }
+    
+    .formHome {
+        height: 500px;
+        margin-top: 30px;
+        padding-left: 35px;
+    }
+    
+    .textoFormHome {
+        text-align: start;
+        margin-right: 20px;
+    }
+    
+
+    /* DISEÑOS */
+
+
+    .contenedorFotos {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(7, auto);
+    }
+
+     /* SERVICIOS */
+
+     .mainServ {
+        margin: 40px 30px;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "seccionA" 
+        "seccionB"
+        "formulario";
+    
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        margin: 5px;
+    }
+
+
+}
+
+@media (max-width: 504px){
+
+    /* HEADER */
+
+    .logo {
+        cursor: pointer;
+        height: 50px;
+    }
+    .slogan {
+        display: flex;
+        height: 95px;
+        align-items: start;
+    }
+
+
+
+    /* HOME */
+
+    .mainHome {
+        margin: 20px 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 210px 500px 450px 500px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -1514,96 +961,27 @@
         "formulario";
     }
     
-    .forth-row {
-        background-color: rgba(184, 184, 184, 0.2);
-    }
-    .divido {
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        grid-area: titulo;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .nuestrosDisenos{
-        color:rgb(218, 13, 30);
-        font-size: 40px;
-        text-transform: uppercase; 
-        text-align: center;
-        font-family: Cocogoose;
-        margin: 0;
-    }
-    
-    
-    .carrusel {
-        grid-area: carrusel;
-    }
-    
-    .quien {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        grid-area: quien;
-        justify-self: center;
-        background-color: rgb(179, 53, 53);
-        border-radius: 8px;
-
-    }
     .quienesSomos{
-        color:rgb(0, 0, 0);
-        font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
     .pquienesSomos {
-        color: black;
-        font-size: 15px;
-        line-height: 15px;
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome {
-        grid-area: muneco;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border: solid rgb(105, 105, 105) 2px;
-        border-radius: 8px;
-        background-color: white;
-    }
     .munecoHome img {
         display: none;
     }
     
     .homeContact {
-        grid-area: contacto;
-        text-align: center;
         margin-top: 10px;
     }
     
-    .botonContacto {
-        font-size: 15px;
-        color: white;
-        background-color: #333;
-        border-radius: 20px;
-        border: none;
-        padding: 12px;
-        font-weight: bold;   
-    }
-    
     .siAbajo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        grid-area: siabajo;
         border-radius: 8px;
-        background-color: rgb(179, 53, 53);
 
     }
     .muneco3 {
@@ -1615,137 +993,128 @@
     .muneco1 {
         display: none;
     }
-    .siAbajo h2 {
-        text-align: center;
-        margin-top: 15px;
-    }
     
     .seccionFormulario {
-        display: flex;
-        flex-direction: column;
         align-content: center;
-        justify-content: center;
-        grid-area: formulario;
-        background-color: rgb(179, 53, 53);
         border-radius: 8px;
     }
     
     .formHome {
-        display: block;
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
     .textoFormHome {
-        font-size: 25px;
         text-align: start;
         margin-right: 20px;
-    }
-    .labelHome {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    
-    .camposHome {
-        display: block;
-        width: 75%;
-        padding: 12px;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-radius: 5px;
-        border-bottom: 1px solid white;
-        font-size: 10px;
-        margin-bottom: 10px;
-        background-color:rgb(247, 141, 141) ;
-       
-    }
-    
-    .btnFormularioHome {
-        background-color: crimson;
-        font-weight: bold;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        margin-top: 10px;
-        cursor: pointer;
-
-    
     }
 
     /* DISEÑOS */
 
-    .mainDisenos {
-        background-image:url(../img/white-spiral.jpg) ;
-    }
-    
-    .tituloDisenos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    }
-    
-    .tituloDisenos img {
-       height: 100px;
-       width: 300px;
-       margin-right: 35px;
-       margin-top: 20px;
-    }
     .contenedorFotos {
-        display: grid;
         grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(7, 500px);
-        gap: 40px;
+        grid-template-rows: repeat(7, auto);
+        margin: 20px 10px;
     }
-    .fotos {
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        height: 100%;
-        margin: 25px 50px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        
+
+
+
+}
+
+@media (max-width: 420px) {
+    .mainHome {
+        margin: 20px 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 190px 500px 450px 500px;
+        grid-template-areas:
+        "titulo"
+        "carrusel"
+        "quien"
+        "contacto"
+        "siabajo"
+        "formulario";
     }
+
+    /* SERVICIOS */
+
+    .mainServ {
+        margin: 40px 15px;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "seccionA" 
+        "seccionB"
+        "formulario";
     
-        
-    .d {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        margin-bottom: 20px;
-        border-radius: 15px;
+    }
+
+
+}
+
+
+@media (max-width: 390px) {
+
+    /* HEADER */
+
+    .logo {
         cursor: pointer;
+        height: 50px;
     }
-      
-    .disenoDesc {
-        font-size: 1rem;
-        text-align: center;
-        margin-bottom: 20px;
+    .slogan {
+        display: flex;
+        height: 75px;
+        align-items: start;
     }
-    
-    .masInfo {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #000000;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        transition: transform 0.5s;
+
+
+
+    /* HOME  */
+    .mainHome {
+        margin: 20px 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 170px 500px 450px 500px;
+        grid-template-areas:
+        "titulo"
+        "carrusel"
+        "quien"
+        "contacto"
+        "siabajo"
+        "formulario";
     }
+
+    .quienesSomos{
+        font-size: 30px;
+    }
+
+    /* SERVICIOS */
+
+    .mainServ {
+        margin: 40px 9px;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        "seccionA" 
+        "seccionB"
+        "formulario";
     
-    .masInfo:hover  {
-        transform: translateY(-5px);
-    
+    }
+
+    .formularioServicios {
+        padding: 30px 15px;
+    }
+
+    .camposServ {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 340px) {
+    .mainServ {
+        margin: 40px 1px;
+    }
+
+    .tituloserv {
+        margin-left: 8px;
     }
 
 
