@@ -18,6 +18,13 @@
         rgb(216, 216, 216) 100%
     );
 }
+.bodySobre {
+    background: linear-gradient(
+        90deg,
+        rgb(114, 114,114) 0%,
+        rgb(216, 216, 216) 100%
+    );
+}
 
 
 /* HEADER */
@@ -26,31 +33,29 @@
 .nav-darosa {
     background-color: rgb(77, 77, 77);
 }
-.logo {
+.nav-darosa .logo {
     display: flex;
     align-items: center;
     cursor: pointer;
     height: 70px;
 }
-.slogan {
+.nav-darosa .slogan {
     display: flex;
     align-items: center;
     height: 125px;
 }
-.nav-links li a {
+.nav-darosa .nav-thiago .nav-links li a {
     font-family: "Montserrat", sans-serif;
-    transition: all 0.3s ease 0s;    
-}
-.nav-links li a:hover {
-    color: crimson;
-    
-}
-.nav-links a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     font-size: 12px;
-}    
+    transition: all 0.3s ease 0s;    
+}
+.nav-darosa .nav-thiago .nav-links li a:hover {
+    color: crimson;
+    
+}  
 
 
 /* HOME */
@@ -69,10 +74,7 @@
     "siabajo formulario";
 }
 
-.forth-row {
-    background-color: rgba(184, 184, 184, 0.2);
-}
-.divido {
+.mainHome .divido {
     width: 100%;
     height: 70px;
     text-align: center;
@@ -82,7 +84,7 @@
     align-items: center;
 }
 
-.nuestrosDisenos{
+.mainHome .divido .nuestrosDisenos{
     color:rgb(218, 13, 30);
     font-size: 40px;
     text-transform: uppercase; 
@@ -92,21 +94,21 @@
 }
 
 
-.carrusel {
+.mainHome .carrusel {
     grid-area: carrusel;
 }
 
-.quien {
+.mainHome .quien {
     display: flex;
     flex-direction: column;
     justify-content: center;
     grid-area: quien;
     justify-self: center;
-    background-color: rgb(179, 53, 53);
+    background-color: rgb(12, 12, 12);
     border-radius: 8px;
 }
-.quienesSomos{
-    color:rgb(0, 0, 0);
+.mainHome .quien .quienesSomos{
+    color:rgb(255, 255, 255);
     font-size: 40px;
     margin-top: 15px;
     margin-left: 15px;
@@ -114,15 +116,15 @@
     
 }
 
-.pquienesSomos {
-    color: black;
+.mainHome .quien .pquienesSomos {
+    color: rgb(255, 255, 255);
     font-size: 15px;
     line-height: 15px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-.munecoHome {
+.mainHome .munecoHome {
     grid-area: muneco;
     display: flex;
     flex-direction: row;
@@ -134,13 +136,13 @@
 }
 
 
-.homeContact {
+.mainHome .homeContact {
     grid-area: contacto;
     text-align: center;
     margin-top: 70px;
 }
 
-.botonContacto {
+.mainHome .homeContact .botonContacto {
     font-size: 15px;
     color: white;
     background-color: #333;
@@ -150,7 +152,7 @@
     font-weight: bold;   
 }
 
-.siAbajo {
+.mainHome .siAbajo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,16 +163,16 @@
     background-color: rgb(179, 53, 53);
 }
 
-.muneco3 {
+.mainHome .siAbajo .muneco3 {
     width: 0;
 }
 
-.siAbajo h2 {
+.mainHome .siAbajo h2 {
     text-align: center;
     margin-top: 15px;
 }
 
-.seccionFormulario {
+.mainHome .seccionFormulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,21 +182,21 @@
     border-bottom-right-radius: 8px;
 }
 
-.formHome {
+.mainHome .seccionFormulario .formHome {
     display: block;
 }
 
-.textoFormHome {
+.mainHome .seccionFormulario .formHome .textoFormHome {
     font-size: 25px;
 }
-.labelHome {
+.mainHome .seccionFormulario .formHome .labelHome {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
     color: #ffffff;
 }
 
-.camposHome {
+.mainHome .seccionFormulario .formHome .camposHome {
     display: block;
     width: 75%;
     padding: 12px;
@@ -209,7 +211,7 @@
    
 }
 
-.btnFormularioHome {
+.mainHome .seccionFormulario .formHome .btnFormularioHome {
     background-color: crimson;
     font-weight: bold;
     color: #fff;
@@ -235,14 +237,14 @@
     "formulario formulario";
 
 }
-.serv {
+.mainServ .serv {
     grid-area: seccionA;
     display: flex;
     flex-direction: column;
 
 }
 
-.serv2 {
+.mainServ .serv2 {
     grid-area: seccionB;
     display: flex;
     justify-content: center;
@@ -250,20 +252,20 @@
 
 }
 
-.formularioServicios {
+.mainServ .formularioServicios {
     grid-area: formulario;
     background-color:rgb(143, 12, 23);
     padding: 30px 30px;
     border-radius: 8px;
 }
     
-.tituloserv{
+.mainServ .serv .tituloserv{
     font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
 }
 
-.verplanes {
+.mainServ .serv .verplanes {
     font-size: 15px;
     color: white;
     background-color: #333;
@@ -275,7 +277,7 @@
  
 }
 
-.textoformserv{
+.mainServ .formularioServicios .formServ .textoformserv{
     color: white;
     width: 50%;
     color: white;
@@ -284,7 +286,7 @@
     padding-bottom: 10px;
 }
 
-.formServ label {
+.mainServ .formularioServicios .formServ label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -293,7 +295,7 @@
     font-size: 15px;
 }
 
-.camposServ {
+.mainServ .formularioServicios .formServ .camposServ {
     display: block;
     padding: 10px;
     border-top: none;
@@ -305,7 +307,7 @@
     background-color:rgb(143, 12, 23) ;
 }
 
-.btnFormularioServ {
+.mainServ .formularioServicios .formServ .btnFormularioServ {
     background-color: #333;
     color: #fff;
     border: none;
@@ -316,7 +318,7 @@
     cursor: pointer;
 }
  
-.serv p {
+.mainServ .serv p {
     padding-top: 10px;
     padding-bottom: 20px;
 }
@@ -327,26 +329,26 @@
     background-image:url(../img/white-spiral.jpg) ;
 }
 
-.tituloDisenos {
+.mainDisenos .tituloDisenos {
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.tituloDisenos img {
+.mainDisenos .tituloDisenos img {
    height: 100px;
    width: 300px;
    margin-right: 35px;
    margin-top: 20px;
 }
-.contenedorFotos {
+.mainDisenos .contenedorFotos {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
     margin: 3rem;
 }
-.fotos {
+.mainDisenos .contenedorFotos .fotos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -358,7 +360,7 @@
 }
 
     
-.d {
+.mainDisenos .contenedorFotos .fotos .d {
     max-width: 350px;
     width: 100%;
     object-fit: cover;
@@ -367,13 +369,13 @@
     cursor: pointer;
 }
   
-.disenoDesc {
+.mainDisenos .contenedorFotos .fotos .disenoDesc {
     font-size: 1rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.masInfo {
+.mainDisenos .contenedorFotos .fotos .masInfo {
     display: inline-block;
     padding: 10px 20px;
     background-color: #000000;
@@ -387,7 +389,7 @@
     transition: transform 0.5s;
 }
 
-.masInfo:hover  {
+.mainDisenos .contenedorFotos .fotos .masInfo:hover  {
     transform: translateY(-5px);
 
 }
@@ -396,48 +398,90 @@
 
 .mainAcer {
     font-family: Montserrat;
+    margin: 40px 80px;
 }
-.acerc {
-    width: 60%;
-    margin: 40px;
+
+.mainAcer .sobreTitulo {
+    color: rgb(218, 13, 30);
+    font-family: Cocogoose;
+    text-align: center;
+}
+.mainAcer .acerc {
+    padding: 30px;
+    border-radius: 8px;
+    background-color: rgba(230, 230, 230, 0.85);
+    padding: 50px;
+    margin-top: 75px;
+    margin-bottom: 90px;
+}
+
+
+.mainAcer .acerc h1{
+    color: rgb(143, 12, 23);
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.mainAcer .acerc .acercParrafo {
+    color: rgb(143, 12, 23);
+    text-align: center;
+    text-align: center;
+
+}
+
+.mainAcer .acercNegro {
+    width: 100%;
+    padding-top: 20px;
+    background-color: rgb(37, 37, 37);  
+    border-radius:  8px;
     padding: 30px;
 }
 
-.acerc h1{
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-
-.acercNegro {
-    width: 100%;
-    padding-top: 20px;
-    background-color: black;  
-}
-
-.acercNegro h1{
-    width: 50%;
+.mainAcer .acercNegro h1{
     font-size: 30px;
     color: white;
-    padding-left: 60px;
+    text-align: center;
 }
 
-.acercParrafo {
+.mainAcer .acercNegro .acercNegroParrafo {
     color: white;
-    padding-left: 60px;
-    padding-bottom: 60px;
+    text-align: center;
+
 }
 
 
 /* CONTACTO */
 
-.formContacto {
+.formulariocontacto{
+    display: flex;
+    background-color:rgb(143, 12, 23);
+    padding: 30px 30px;
+}
+
+.formulariocontacto .formContacto {
+    flex-basis: 50%;
     margin-top: 20px;
     margin-left: 20px;
 }
 
-.textoformcont {
-    width: 50%;
+.formulariocontacto .formContacto label {
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    
+}
+
+.formulariocontacto .formImagen {
+    flex-basis: 50%;
+    align-self: center;
+    justify-content: center;
+}
+
+.formulariocontacto .formImagen img {
+    width: 100%;
+}
+
+.formulariocontacto .formContacto .textoformcont {
     color: white;
     text-transform: uppercase;
     font-size: 25px;
@@ -445,16 +489,16 @@
 
 }
 
-.labelContacto {
+.formulariocontacto .formContacto .labelContacto {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
 }
 
-.camposContacto {
+.formulariocontacto .formContacto .camposContacto {
     display: block;
-    width: 30%;
+    width: 100%;
     padding: 10px;
     border-top: none;
     border-left: none;
@@ -466,7 +510,7 @@
    
 }
 
-.btnFormularioContacto {
+.formulariocontacto .formContacto .btnFormularioContacto {
     background-color: #333;
     color: #fff;
     border: none;
@@ -476,21 +520,12 @@
     margin-top: 10px;
     cursor: pointer;
 }
-.formulariocontacto{
-    background-color:rgb(143, 12, 23);
-    padding: 30px 30px;
-}
-.formulariocontacto label {
-    color: white;
-    text-transform: uppercase;
-    font-size: 15px;
-    
-}
+
 
 
 /* FOOTER */
 .footer {
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(143, 12, 23);
     text-align: center;
     margin: 70px;
     padding: 50px;
@@ -499,6 +534,7 @@
 
 .footer h3 {
     font-size: 15px;
+    color: rgb(143, 12, 23);
 }
 
 /* MEDIA QUERIES */
@@ -522,43 +558,39 @@
         "formulario";
     }
     
-    .quienesSomos{
-        color:rgb(0, 0, 0);
+    .mainHome .quien .quienesSomos{
         font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
     
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         width: 350px;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
@@ -567,18 +599,15 @@
 
     /* DISEÑOS */
 
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(2,1fr);
     }
 
     /* SERVICIOS */
 
-    .serv p {
+    .mainServ .serv p {
         font-size: 15px;
     }
-
-
-
 
 } 
 
@@ -600,46 +629,43 @@
         "formulario";
     }
     
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         font-size: 40px;
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
     
-    .siAbajo {
+    .mainHome .siAbajo {
         border-radius: 8px;
     }
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         width: 350px;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         justify-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
@@ -648,14 +674,14 @@
 
     /* DISEÑOS */
 
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(2,1fr);
     }
 
 
     /* SERVICIOS */
 
-    .tituloserv {
+    .mainServ .serv .tituloserv {
         font-size: 22px;
     }
 
@@ -678,46 +704,43 @@
         "formulario";
     }
  
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
 
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
     
     
-    .siAbajo {
+    .mainHome .siAbajo {
         border-radius: 8px;
 
     }
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         width: 350px;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
@@ -725,7 +748,7 @@
     
     /* DISEÑOS */
 
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(2,1fr);
     }
     
@@ -735,14 +758,15 @@
         grid-template-columns: 50% 50% ;
     }
 
-    .serv2 img {
+    .mainServ .serv2 img {
         width: 280px;
     }
 
 
-    .tituloserv {
+    .mainServ .serv .tituloserv {
         font-size: 22px;
     }
+    
 
 }
 
@@ -762,45 +786,42 @@
         "formulario";
     }
     
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
     
-    .siAbajo {
+    .mainHome .siAbajo {
         border-radius: 8px;
 
     }
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         width: 350px;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
@@ -810,7 +831,7 @@
     /* DISEÑOS */
     
     
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(7, auto);
     }
@@ -824,7 +845,6 @@
         "seccionA" 
         "seccionB"
         "formulario";
-    
     }
       
 
@@ -848,53 +868,50 @@
         "formulario";
     }
 
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
 
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
 
     
-    .siAbajo {
+    .mainHome .siAbajo {
         border-radius: 8px;
 
     }
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         max-width: 300px;
         width: 100%;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
+    .mainHome .seccionFormulario .formHome .textoFormHome {
         text-align: start;
         margin-right: 20px;
     }
@@ -903,7 +920,7 @@
     /* DISEÑOS */
 
 
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(7, auto);
     }
@@ -917,7 +934,26 @@
         "seccionA" 
         "seccionB"
         "formulario";
-    
+    }
+
+    /* SOBRE NOSOTROS */
+
+    .mainAcer {
+        margin: 40px 30px;
+    }
+
+    /* CONTACTO */
+
+    .formulariocontacto {
+        flex-direction: column;
+    }
+
+    .formulariocontacto .formContacto {
+        margin-left: 0px;
+    }
+
+    .formulariocontacto .formContacto .btnFormularioContacto {
+        width: 100%;
     }
 
 
@@ -934,11 +970,11 @@
 
     /* HEADER */
 
-    .logo {
+    .nav-darosa .logo {
         cursor: pointer;
         height: 50px;
     }
-    .slogan {
+    .nav-darosa .slogan {
         display: flex;
         height: 95px;
         align-items: start;
@@ -961,63 +997,59 @@
         "formulario";
     }
     
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         margin-top: 20px;
         margin-left: 0;
         text-align: center;
     }
     
-    .pquienesSomos {
+    .mainHome .quien .pquienesSomos {
         margin-left: 45px;
         margin-right: 45px;
     }
     
-    .munecoHome img {
+    .mainHome .munecoHome img {
         display: none;
     }
     
-    .homeContact {
+    .mainHome .homeContact {
         margin-top: 10px;
     }
     
-    .siAbajo {
+    .mainHome .siAbajo {
         border-radius: 8px;
 
     }
-    .muneco3 {
+    .mainHome .siAbajo .muneco3 {
         width: 350px;
     }
-    .muneco2 {
-        display: none;
-    }
-    .muneco1 {
+    .mainHome .siAbajo .muneco2 {
         display: none;
     }
     
-    .seccionFormulario {
+    .mainHome .seccionFormulario {
         align-content: center;
         border-radius: 8px;
     }
     
-    .formHome {
+    .mainHome .seccionFormulario .formHome {
         height: 500px;
         margin-top: 30px;
         padding-left: 35px;
     }
     
-    .textoFormHome {
+    .mainHome .seccionFormulario .formHome .textoFormHome {
         text-align: start;
         margin-right: 20px;
     }
 
     /* DISEÑOS */
 
-    .contenedorFotos {
+    .mainDisenos .contenedorFotos {
         grid-template-columns: repeat(1,1fr);
         grid-template-rows: repeat(7, auto);
         margin: 20px 10px;
     }
-
 
 
 }
@@ -1045,7 +1077,16 @@
         "seccionA" 
         "seccionB"
         "formulario";
-    
+    }
+
+    /* SOBRE NOSOTROS */
+
+    .mainAcer {
+        margin: 40px 15px;
+    }
+
+    .mainAcer .acerc {
+        padding: 20px;
     }
 
 
@@ -1056,11 +1097,11 @@
 
     /* HEADER */
 
-    .logo {
+    .nav-darosa .logo {
         cursor: pointer;
         height: 50px;
     }
-    .slogan {
+    .nav-darosa .slogan {
         display: flex;
         height: 75px;
         align-items: start;
@@ -1082,7 +1123,7 @@
         "formulario";
     }
 
-    .quienesSomos{
+    .mainHome .quien .quienesSomos{
         font-size: 30px;
     }
 
@@ -1098,13 +1139,20 @@
     
     }
 
-    .formularioServicios {
+    .mainServ .formularioServicios {
         padding: 30px 15px;
     }
 
-    .camposServ {
+    .mainServ .formularioServicios .formServ .camposServ {
         font-size: 12px;
     }
+
+    /* SOBRE NOSOTROS */
+
+    .mainAcer {
+        margin: 40px 9px;
+    }
+
 
 }
 
@@ -1113,7 +1161,7 @@
         margin: 40px 1px;
     }
 
-    .tituloserv {
+    .mainServ .serv .tituloserv {
         margin-left: 8px;
     }
 
