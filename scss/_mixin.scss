@@ -1,0 +1,7 @@
+@mixin body {
+    background: linear-gradient(
+        90deg,
+        rgb(114, 114, 114) 0%,
+        rgb(216, 216, 216) 100%
+    );
+}

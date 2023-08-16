@@ -1,0 +1,60 @@
+/* DISEÑOS */
+
+.mainDisenos {
+	background-image: url(../img/white-spiral.jpg);
+	.tituloDisenos {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			height: 100px;
+			width: 300px;
+			margin-right: 35px;
+			margin-top: 20px;
+		}
+	}
+	.contenedorFotos {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		gap: 50px;
+		margin: 3rem;
+		.fotos {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+			.d {
+				max-width: 350px;
+				width: 100%;
+				object-fit: cover;
+				margin-bottom: 20px;
+				border-radius: 15px;
+				cursor: pointer;
+			}
+			.disenoDesc {
+				font-size: 1rem;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.masInfo {
+				display: inline-block;
+				padding: 10px 20px;
+				background-color: #000000;
+				color: #fff;
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+				border-radius: 5px;
+				cursor: pointer;
+				border: none;
+				transition: transform 0.5s;
+				&:hover {
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+}

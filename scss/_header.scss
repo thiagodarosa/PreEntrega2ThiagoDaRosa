@@ -1,0 +1,33 @@
+/* HEADER*/
+
+.nav-darosa {
+	background-color: rgb(77, 77, 77);
+	.logo {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		height: 70px;
+	}
+	.slogan {
+		display: flex;
+		align-items: center;
+		height: 125px;
+	}
+	.nav-thiago {
+		.nav-links {
+			li {
+				a {
+					font-family: "Montserrat", sans-serif;
+					text-decoration: none;
+					color: #ffffff;
+					font-weight: bold;
+					font-size: 12px;
+					transition: all 0.3s ease 0s;
+					&:hover {
+						color: crimson;
+					}
+				}
+			}
+		}
+	}
+}

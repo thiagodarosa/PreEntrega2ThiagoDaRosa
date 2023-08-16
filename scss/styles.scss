@@ -1,0 +1,28 @@
+@import "header";
+@import "home";
+@import "serv";
+@import "disenos";
+@import "acerc";
+@import "contacto";
+@import "footer";
+@import "fuentes";
+@import "queries";
+@import "variables";
+@import "mixin";
+
+
+/* GENERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyHome {
+    @include body;
+}
+.bodySobre {
+    @include body;
+}
+
