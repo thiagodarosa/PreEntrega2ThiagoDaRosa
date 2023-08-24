@@ -67,6 +67,23 @@
         font-size: 14.5px;
     }
 
+    /* ACERCA DE */
+
+    .mainAcer {
+        padding: 30px;
+        .acerContent {
+            flex-direction: column;
+            .quienContent {
+                order: -2;
+                padding: 0;
+                margin: 30px auto;
+            }
+            .quienImg {
+                max-width: 900px;
+            }
+        }
+    }
+
 } 
 
 
@@ -305,6 +322,9 @@
         "formulario";
     }
       
+    .imagenPlan2 {
+        display: none;
+    }
 
 }
 
@@ -394,10 +414,8 @@
         "formulario";
     }
 
-    /* SOBRE NOSOTROS */
-
-    .mainAcer {
-        margin: 40px 30px;
+    .imagenPlan2 {
+        display: none;
     }
 
     /* CONTACTO */
@@ -435,7 +453,7 @@
     .nav-darosa .slogan {
         display: flex;
         height: 95px;
-        align-items: start;
+        align-items: flex-start;
     }
 
 
@@ -516,7 +534,7 @@
     .mainHome {
         margin: 20px 2px;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 190px 500px 450px 500px;
+        grid-template-rows: 60px 190px 500px 550px 500px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -536,17 +554,6 @@
         "seccionB"
         "formulario";
     }
-
-    /* SOBRE NOSOTROS */
-
-    .mainAcer {
-        margin: 40px 15px;
-    }
-
-    .mainAcer .acerc {
-        padding: 20px;
-    }
-
 
 }
 
@@ -571,7 +578,7 @@
     .mainHome {
         margin: 20px 2px;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 170px 500px 450px 500px;
+        grid-template-rows: 60px 170px 500px 550px 500px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -604,23 +611,31 @@
     .mainServ .formularioServicios .formServ .camposServ {
         font-size: 12px;
     }
-
-    /* SOBRE NOSOTROS */
-
-    .mainAcer {
-        margin: 40px 9px;
-    }
-
-
 }
 
 @media (max-width: 340px) {
+
+    /* HOME  */
+    .mainHome {
+        margin: 20px 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 170px 500px 600px 500px;
+        grid-template-areas:
+        "titulo"
+        "carrusel"
+        "quien"
+        "contacto"
+        "siabajo"
+        "formulario";
+    }
+
+
     .mainServ {
         margin: 40px 1px;
     }
 
     .mainServ .serv .tituloserv {
-        margin-left: 8px;
+        margin-left: auto;
     }
 
 

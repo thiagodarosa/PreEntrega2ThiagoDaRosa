@@ -5,3 +5,14 @@
         rgb(216, 216, 216) 100%
     );
 }
+
+@mixin boton($bgcolor, $width) {
+    font-size: 15px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    background-color: $bgcolor;
+    width: $width;
+}

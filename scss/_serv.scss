@@ -4,13 +4,13 @@
 
 .mainServ {
 	font-family: Montserrat;
-	margin: 40px 80px;
+	margin: 40px 70px;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: auto auto;
 	row-gap: 45px;
 	grid-template-areas: "seccionA seccionB"
-    "formulario formulario";
+    "plan2 formulario";
 	.serv {
 		grid-area: seccionA;
 		display: flex;
@@ -21,13 +21,7 @@
 			margin-top: 20px;
 		}
 		.verplanes {
-			font-size: 15px;
-			color: white;
-			background-color: #333;
-			border-radius: 20px;
-			border: none;
-			padding: 12px;
-			font-weight: bold;
+			@include boton(#333, 200px);
 			margin: auto;
 		}
 		p {
@@ -41,11 +35,20 @@
 		justify-content: center;
 		align-items: center;
 	}
+	.imagenPlan2 {
+		grid-area: plan2;
+		align-self: center;
+		img {
+			width: 100%;
+		}
+	}
 	.formularioServicios {
 		grid-area: formulario;
 		background-color: $color-form;
 		padding: 30px 30px;
 		border-radius: 8px;
+		max-width: 700px;
+		margin: 0 auto;
 		.formServ {
 			.textoformserv {
 				color: white;
@@ -64,6 +67,7 @@
 				font-size: 15px;
 			}
 			.camposServ {
+				width: 100%;
 				display: block;
 				padding: 10px;
 				border-top: none;

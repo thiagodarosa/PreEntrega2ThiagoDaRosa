@@ -1,46 +1,20 @@
 /* ACERCA DE*/ 
 
 .mainAcer {
-	font-family: Montserrat;
-	margin: 40px 80px;
-	.sobreTitulo {
-		color: rgb(218, 13, 30);
-		font-family: Cocogoose;
-		text-align: center;
-	}
-	.acerc {
-		padding: 30px;
-		border-radius: 8px;
-		background-color: rgba(230, 230, 230, 0.85);
-		padding: 50px;
-		margin-top: 75px;
-		margin-bottom: 90px;
-		h1 {
-			color: rgb(143, 12, 23);
-			font-size: 30px;
-			font-weight: bolder;
-			text-align: center;
-		}
-		.acercParrafo {
-			color: rgb(143, 12, 23);
-			text-align: center;
-			text-align: center;
-		}
-	}
-	.acercNegro {
-		width: 100%;
-		padding-top: 20px;
-		background-color: rgb(37, 37, 37);
-		border-radius: 8px;
-		padding: 30px;
-		h1 {
-			font-size: 30px;
-			color: white;
-			text-align: center;
-		}
-		.acercNegroParrafo {
-			color: white;
-			text-align: center;
-		}
-	}
+    background-color: #e4e4e4;
+    .acerContent {
+        display: flex;
+        .quienContent {
+            flex-basis: 50%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px 0 30px 0;
+        }
+        .quienImg {
+            flex-basis: 50%;
+            img {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -1,3 +1,5 @@
+@import "mixin";
+
 /* HOME */
 
 .mainHome {
@@ -37,14 +39,13 @@
 		justify-content: center;
 		grid-area: quien;
 		justify-self: center;
-		background-color: rgb(12, 12, 12);
+		background-color: rgb(24, 24, 24);
 		border-radius: 8px;
 		.quienesSomos {
 			color: rgb(255, 255, 255);
 			font-size: 40px;
-			margin-top: 15px;
 			margin-left: 15px;
-			margin-bottom: 25px;
+			margin-bottom: 10px;
 		}
 		.pquienesSomos {
 			color: rgb(255, 255, 255);
@@ -69,13 +70,7 @@
 		text-align: center;
 		margin-top: 70px;
 		.botonContacto {
-			font-size: 15px;
-			color: white;
-			background-color: #333;
-			border-radius: 20px;
-			border: none;
-			padding: 12px;
-			font-weight: bold;
+			@include boton(#333, 200px)
 		}
 	}
 	.siAbajo {

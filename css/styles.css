@@ -15,6 +15,9 @@
   align-items: center;
   height: 125px;
 }
+.nav-darosa .nav-thiago .nav-links {
+  text-align: right;
+}
 .nav-darosa .nav-thiago .nav-links li a {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -62,15 +65,14 @@
   justify-content: center;
   grid-area: quien;
   justify-self: center;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(24, 24, 24);
   border-radius: 8px;
 }
 .mainHome .quien .quienesSomos {
   color: rgb(255, 255, 255);
   font-size: 40px;
-  margin-top: 15px;
   margin-left: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .mainHome .quien .pquienesSomos {
   color: rgb(255, 255, 255);
@@ -96,12 +98,13 @@
 }
 .mainHome .homeContact .botonContacto {
   font-size: 15px;
-  color: white;
-  background-color: #333;
   border-radius: 20px;
+  color: white;
   border: none;
   padding: 12px;
   font-weight: bold;
+  background-color: #333;
+  width: 200px;
 }
 .mainHome .siAbajo {
   display: flex;
@@ -169,12 +172,12 @@
 /* SERVICIOS */
 .mainServ {
   font-family: Montserrat;
-  margin: 40px 80px;
+  margin: 40px 70px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
   row-gap: 45px;
-  grid-template-areas: "seccionA seccionB" "formulario formulario";
+  grid-template-areas: "seccionA seccionB" "plan2 formulario";
 }
 .mainServ .serv {
   grid-area: seccionA;
@@ -188,12 +191,13 @@
 }
 .mainServ .serv .verplanes {
   font-size: 15px;
-  color: white;
-  background-color: #333;
   border-radius: 20px;
+  color: white;
   border: none;
   padding: 12px;
   font-weight: bold;
+  background-color: #333;
+  width: 200px;
   margin: auto;
 }
 .mainServ .serv p {
@@ -206,11 +210,20 @@
   justify-content: center;
   align-items: center;
 }
+.mainServ .imagenPlan2 {
+  grid-area: plan2;
+  align-self: center;
+}
+.mainServ .imagenPlan2 img {
+  width: 100%;
+}
 .mainServ .formularioServicios {
   grid-area: formulario;
   background-color: rgb(143, 12, 23);
   padding: 30px 30px;
   border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .mainServ .formularioServicios .formServ .textoformserv {
   color: white;
@@ -229,6 +242,7 @@
   font-size: 15px;
 }
 .mainServ .formularioServicios .formServ .camposServ {
+  width: 100%;
   display: block;
   padding: 10px;
   border-top: none;
@@ -312,48 +326,22 @@
 
 /* ACERCA DE*/
 .mainAcer {
-  font-family: Montserrat;
-  margin: 40px 80px;
+  background-color: #e4e4e4;
 }
-.mainAcer .sobreTitulo {
-  color: rgb(218, 13, 30);
-  font-family: Cocogoose;
-  text-align: center;
+.mainAcer .acerContent {
+  display: flex;
 }
-.mainAcer .acerc {
-  padding: 30px;
-  border-radius: 8px;
-  background-color: rgba(230, 230, 230, 0.85);
-  padding: 50px;
-  margin-top: 75px;
-  margin-bottom: 90px;
+.mainAcer .acerContent .quienContent {
+  flex-basis: 50%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 0 30px 0;
 }
-.mainAcer .acerc h1 {
-  color: rgb(143, 12, 23);
-  font-size: 30px;
-  font-weight: bolder;
-  text-align: center;
+.mainAcer .acerContent .quienImg {
+  flex-basis: 50%;
 }
-.mainAcer .acerc .acercParrafo {
-  color: rgb(143, 12, 23);
-  text-align: center;
-  text-align: center;
-}
-.mainAcer .acercNegro {
+.mainAcer .acerContent .quienImg img {
   width: 100%;
-  padding-top: 20px;
-  background-color: rgb(37, 37, 37);
-  border-radius: 8px;
-  padding: 30px;
-}
-.mainAcer .acercNegro h1 {
-  font-size: 30px;
-  color: white;
-  text-align: center;
-}
-.mainAcer .acercNegro .acercNegroParrafo {
-  color: white;
-  text-align: center;
 }
 
 /* CONTACTO */
@@ -478,6 +466,21 @@
   /* SERVICIOS */
   .mainServ .serv p {
     font-size: 14.5px;
+  }
+  /* ACERCA DE */
+  .mainAcer {
+    padding: 30px;
+  }
+  .mainAcer .acerContent {
+    flex-direction: column;
+  }
+  .mainAcer .acerContent .quienContent {
+    order: -2;
+    padding: 0;
+    margin: 30px auto;
+  }
+  .mainAcer .acerContent .quienImg {
+    max-width: 900px;
   }
 }
 @media (min-width: 800px) and (max-width: 900px) {
@@ -638,6 +641,9 @@
     grid-template-columns: 1fr;
     grid-template-areas: "seccionA" "seccionB" "formulario";
   }
+  .imagenPlan2 {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   /* HOME */
@@ -696,9 +702,8 @@
     grid-template-columns: 1fr;
     grid-template-areas: "seccionA" "seccionB" "formulario";
   }
-  /* SOBRE NOSOTROS */
-  .mainAcer {
-    margin: 40px 30px;
+  .imagenPlan2 {
+    display: none;
   }
   /* CONTACTO */
   .formulariocontacto {
@@ -724,7 +729,7 @@
   .nav-darosa .slogan {
     display: flex;
     height: 95px;
-    align-items: start;
+    align-items: flex-start;
   }
   /* HOME */
   .mainHome {
@@ -781,7 +786,7 @@
   .mainHome {
     margin: 20px 2px;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 190px 500px 450px 500px;
+    grid-template-rows: 60px 190px 500px 550px 500px;
     grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
   }
   /* SERVICIOS */
@@ -789,13 +794,6 @@
     margin: 40px 15px;
     grid-template-columns: 1fr;
     grid-template-areas: "seccionA" "seccionB" "formulario";
-  }
-  /* SOBRE NOSOTROS */
-  .mainAcer {
-    margin: 40px 15px;
-  }
-  .mainAcer .acerc {
-    padding: 20px;
   }
 }
 @media (max-width: 390px) {
@@ -813,7 +811,7 @@
   .mainHome {
     margin: 20px 2px;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 170px 500px 450px 500px;
+    grid-template-rows: 60px 170px 500px 550px 500px;
     grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
   }
   .mainHome .quien .quienesSomos {
@@ -831,17 +829,20 @@
   .mainServ .formularioServicios .formServ .camposServ {
     font-size: 12px;
   }
-  /* SOBRE NOSOTROS */
-  .mainAcer {
-    margin: 40px 9px;
-  }
 }
 @media (max-width: 340px) {
+  /* HOME  */
+  .mainHome {
+    margin: 20px 2px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 170px 500px 600px 500px;
+    grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
+  }
   .mainServ {
     margin: 40px 1px;
   }
   .mainServ .serv .tituloserv {
-    margin-left: 8px;
+    margin-left: auto;
   }
 }
 /* GENERAL */
@@ -857,6 +858,10 @@
 
 .bodySobre {
   background: linear-gradient(90deg, rgb(114, 114, 114) 0%, rgb(216, 216, 216) 100%);
+}
+
+hr {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
