@@ -2,12 +2,63 @@
 
 .footer {
 	border-top: 1px solid rgb(143, 12, 23);
-	text-align: center;
-	margin: 70px;
-	padding: 50px;
-	text-transform: uppercase;
-	h3 {
-		font-size: 15px;
-		color: rgb(143, 12, 23);
+	position: relative;
+	width: 100%;
+	min-height: 100px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.socialIconos {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px 0;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			a {
+				font-size: 2em;
+				color: #333;
+				margin: 0 10px;
+				display: inline-block;
+				transition: 0.5s;
+				&:hover {
+					transform: translateY(-10px);
+					color: crimson;
+				}
+			}
+		}
+	}
+	.menuFooter{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px 0;
+		flex-wrap: wrap;
+		li {
+			list-style: none;
+			a {
+				font-size: 1.2em;
+				color: #333;
+				margin: 0 10px;
+				display: inline-block;	
+				text-decoration: none;
+				opacity: 0.75;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	p {
+		color: #333;
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		font-size: 1.1em;
 	}
 }

@@ -6,7 +6,7 @@
 
     .mainHome {
         grid-template-columns: 1fr;
-        grid-template-rows: 60px auto 360px 360px 500px;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -14,6 +14,10 @@
         "contacto"
         "siabajo"
         "formulario";
+    }
+
+    .mainHome .quien {
+        border-radius: 8px;
     }
     
     .mainHome .quien .quienesSomos{
@@ -196,11 +200,13 @@
     
     .mainHome .homeContact {
         margin-top: 10px;
+        margin-bottom: 25px;
     }
     
     
     .mainHome .siAbajo {
         border-radius: 8px;
+        margin-top: 30px;
 
     }
     .mainHome .siAbajo .muneco3 {
@@ -278,10 +284,12 @@
     
     .mainHome .homeContact {
         margin-top: 10px;
+        margin-bottom: 25px;
     }
     
     .mainHome .siAbajo {
         border-radius: 8px;
+        margin-top: 25px;
 
     }
     .mainHome .siAbajo .muneco3 {
@@ -578,7 +586,7 @@
     .mainHome {
         margin: 20px 2px;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 170px 500px 550px 500px;
+        grid-template-rows: 60px 170px auto auto 500px;
         grid-template-areas:
         "titulo"
         "carrusel"
@@ -586,6 +594,10 @@
         "contacto"
         "siabajo"
         "formulario";
+    }
+
+    .mainHome .quien {
+        height: max-content;
     }
 
     .mainHome .quien .quienesSomos{
@@ -619,7 +631,7 @@
     .mainHome {
         margin: 20px 2px;
         grid-template-columns: 1fr;
-        grid-template-rows: 60px 170px 500px 600px 500px;
+        grid-template-rows: 60px 170px 500px 700px 500px;
         grid-template-areas:
         "titulo"
         "carrusel"

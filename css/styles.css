@@ -35,7 +35,7 @@
   margin: 40px 80px;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 70px auto 400px 350px 500px;
+  grid-template-rows: auto auto auto auto auto;
   row-gap: 45px;
   grid-template-areas: "titulo titulo" "carrusel carrusel" "quien muneco" "contacto contacto" "siabajo formulario";
 }
@@ -63,22 +63,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 70px 0;
   grid-area: quien;
   justify-self: center;
-  background-color: rgb(24, 24, 24);
-  border-radius: 8px;
+  background: linear-gradient(0.25turn, rgb(68, 68, 68), 50%, rgb(255, 255, 255));
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .mainHome .quien .quienesSomos {
-  color: rgb(255, 255, 255);
+  color: crimson;
   font-size: 40px;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-bottom: 10px;
 }
 .mainHome .quien .pquienesSomos {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 15px;
-  line-height: 15px;
-  margin-left: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-left: 25px;
   margin-right: 15px;
 }
 .mainHome .munecoHome {
@@ -87,14 +90,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: solid rgb(105, 105, 105) 2px;
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   background-color: white;
 }
 .mainHome .homeContact {
   grid-area: contacto;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mainHome .homeContact .ofrezco {
+  font-weight: 500;
+  font-size: 18.5px;
 }
 .mainHome .homeContact .botonContacto {
   font-size: 15px;
@@ -110,7 +118,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding: 50px 0;
   grid-area: siabajo;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -305,11 +313,13 @@
 .mainDisenos .contenedorFotos .fotos .disenoDesc {
   font-size: 1rem;
   text-align: center;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 .mainDisenos .contenedorFotos .fotos .masInfo {
   display: inline-block;
   padding: 10px 20px;
+  margin-top: auto;
   background-color: #000000;
   color: #fff;
   font-size: 1rem;
@@ -406,14 +416,65 @@
 /* FOOTER */
 .footer {
   border-top: 1px solid rgb(143, 12, 23);
-  text-align: center;
-  margin: 70px;
-  padding: 50px;
-  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.footer h3 {
-  font-size: 15px;
-  color: rgb(143, 12, 23);
+.footer .socialIconos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.footer .socialIconos li {
+  list-style: none;
+}
+.footer .socialIconos li a {
+  font-size: 2em;
+  color: #333;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.footer .socialIconos li a:hover {
+  transform: translateY(-10px);
+  color: crimson;
+}
+.footer .menuFooter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+.footer .menuFooter li {
+  list-style: none;
+}
+.footer .menuFooter li a {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+.footer .menuFooter li a:hover {
+  opacity: 1;
+}
+.footer p {
+  color: #333;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 @font-face {
@@ -425,8 +486,11 @@
   /* HOME */
   .mainHome {
     grid-template-columns: 1fr;
-    grid-template-rows: 60px auto 360px 360px 500px;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
+  }
+  .mainHome .quien {
+    border-radius: 8px;
   }
   .mainHome .quien .quienesSomos {
     font-size: 40px;
@@ -555,9 +619,11 @@
   }
   .mainHome .homeContact {
     margin-top: 10px;
+    margin-bottom: 25px;
   }
   .mainHome .siAbajo {
     border-radius: 8px;
+    margin-top: 30px;
   }
   .mainHome .siAbajo .muneco3 {
     width: 350px;
@@ -611,9 +677,11 @@
   }
   .mainHome .homeContact {
     margin-top: 10px;
+    margin-bottom: 25px;
   }
   .mainHome .siAbajo {
     border-radius: 8px;
+    margin-top: 25px;
   }
   .mainHome .siAbajo .muneco3 {
     width: 350px;
@@ -811,8 +879,11 @@
   .mainHome {
     margin: 20px 2px;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 170px 500px 550px 500px;
+    grid-template-rows: 60px 170px auto auto 500px;
     grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
+  }
+  .mainHome .quien {
+    height: max-content;
   }
   .mainHome .quien .quienesSomos {
     font-size: 30px;
@@ -835,7 +906,7 @@
   .mainHome {
     margin: 20px 2px;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 170px 500px 600px 500px;
+    grid-template-rows: 60px 170px 500px 700px 500px;
     grid-template-areas: "titulo" "carrusel" "quien" "contacto" "siabajo" "formulario";
   }
   .mainServ {
@@ -853,11 +924,11 @@
 }
 
 .bodyHome {
-  background: linear-gradient(90deg, rgb(114, 114, 114) 0%, rgb(216, 216, 216) 100%);
+  background-color: #e4e4e4;
 }
 
 .bodySobre {
-  background: linear-gradient(90deg, rgb(114, 114, 114) 0%, rgb(216, 216, 216) 100%);
+  background-color: #e4e4e4;
 }
 
 hr {

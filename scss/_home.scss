@@ -6,7 +6,7 @@
 	margin: 40px 80px;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 70px auto 400px 350px 500px;
+	grid-template-rows: auto auto auto auto auto;
 	row-gap: 45px;
 	grid-template-areas: "titulo titulo"
     "carrusel carrusel"
@@ -37,21 +37,24 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		padding: 70px 0;
 		grid-area: quien;
 		justify-self: center;
-		background-color: rgb(24, 24, 24);
-		border-radius: 8px;
+		background: linear-gradient(.25turn, rgb(68, 68, 68), 50%, rgb(255, 255, 255));;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
 		.quienesSomos {
-			color: rgb(255, 255, 255);
+			color: crimson;
 			font-size: 40px;
-			margin-left: 15px;
+			margin-left: 25px;
 			margin-bottom: 10px;
 		}
 		.pquienesSomos {
-			color: rgb(255, 255, 255);
+			color: rgb(0, 0, 0);
 			font-size: 15px;
-			line-height: 15px;
-			margin-left: 15px;
+			font-weight: 500;
+			line-height: 20px;
+			margin-left: 25px;
 			margin-right: 15px;
 		}
 	}
@@ -61,14 +64,19 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		border: solid rgb(105, 105, 105) 2px;
-		border-radius: 8px;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
 		background-color: white;
 	}
 	.homeContact {
 		grid-area: contacto;
 		text-align: center;
-		margin-top: 70px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		.ofrezco {
+			font-weight: 500;
+			font-size: 18.5px;
+		}
 		.botonContacto {
 			@include boton(#333, 200px)
 		}
@@ -77,7 +85,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 20px;
+		padding: 50px 0;
 		grid-area: siabajo;
 		border-top-left-radius: 8px;
 		border-bottom-left-radius: 8px;
